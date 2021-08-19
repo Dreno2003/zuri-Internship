@@ -4,6 +4,10 @@
 	font-family: sans-serif;
 }
 
+ html {
+  scroll-behavior: smooth;
+}
+
 .headerContent {
 	display: flex;
 	justify-content: space-between;
@@ -29,13 +33,19 @@
 .navigations a {
 	text-decoration: none;
 	color: #9b9b9b;
+	outline: none;
+	transition: .2s ease;
 	
 }
 
+.navigations a:hover {
+	color: #ffc800;
+}
+
 .heroSec {
-	background-image: url(img/hpic.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url(img/hpic.jpg);
 	color: #ffff;
-	height: 27.3em;
+	height: 39.3em;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -43,6 +53,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.nplxq{
+	font-size: 33.5px;
+	margin-bottom: 12px;
 }
 
 button {
@@ -53,17 +68,27 @@ button {
 	font-size: 16.5px;
 	text-transform: uppercase;
 	outline: none;
+	margin-top: 1.5em;
 }
 
-button .learnAc {
+ .learnAc {
 	text-decoration: none;
 	color: white;
 }
+
+/*button :hover {
+	background-color: green !important;
+
+}*/
 
 /*About Section*/
 
 #aboutSection {
 	margin: 39px 12.5px 0px 12.5px;
+		justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
 }
 
 .nkposp{
@@ -89,6 +114,11 @@ button .learnAc {
 
 #resume{
 	margin: 2.34em 12.5px 3em 12.5px;
+	argin: 39px 12.5px 0px 12.5px;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
 
 }
 
@@ -98,11 +128,39 @@ button .learnAc {
 	/*font-weight: normal;*/
 }
 
+/*logos*/
+	
+	#sponsorlogos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		margin-bottom: 80px;
+	}	
+
+	.logosWrap{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		/*flex-wrap: ;*/
+
+	}
+
+.logosWrap a{
+		text-decoration: none;
+		outline: none;
+		border: none;
+
+	}
+
+
+/*===============*/
 /*contact section*/
 
 #contact {
 	background-image: url(img/map-image.png);
-	background-color: black;
+	background-color: #16181a;
 	padding: 57.6px 0px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -143,6 +201,20 @@ button .learnAc {
 	outline: none !important;
 }
 
+[name='area'] {
+		width: 82.7vw;
+		outline: none;
+		border: 0px ;
+		border-radius: 4px;
+		padding: 20px 0px 0px 20px;
+		margin: 0.58em;
+		margin-left: 15px;
+}
+
+[name='area']:focus {
+	color: #d9aa02;
+}
+
 [type='text']:focus {
 	color: #d9aa02;
 }
@@ -168,4 +240,154 @@ button .learnAc {
 	outline: none;
 	background-color: #ffc800;
 	color: #fff;
+}
+
+
+/*footer*/
+
+	.fotTwo {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 17px;
+	}
+
+.iconWrapper {
+	display: flex;
+	margin-top: 15px;
+	color: #383936;
+}
+
+.iconWrapper div {
+	margin-right: 20px;
+}
+/*=============*/
+
+/*media querries*/
+
+
+@media (min-width: 640px) {
+		.logosWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logosWrap a {
+	margin-right: 25px;
+}
+
+}
+
+@media (min-width: 832px) {
+
+	.icon {
+		display: none;
+	}
+
+	.navigations {
+		display: block;
+	}
+
+	ol {
+		display: flex;
+	}
+
+	ol li {
+		padding-right: 16px;
+	}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 10.5px 9px 10.5px 9px;
+	
+}		
+
+/*about sec*/
+
+	.author-img{
+		/*border-radius: 50%;*/
+	}
+
+	#aboutSection{
+		display: flex;
+		justify-content: space-between;
+		margin: 5.5em 53px 0px 53px;
+
+	}
+
+	.aboutContentmain {
+		width: 43vw;
+	}
+
+	.plicationMain {
+		width: 43vw;
+	}
+
+	/*application*/
+
+	.resuImg {
+		width: 21.3em;
+	}
+
+	#resume {
+	margin: 2.34em 12.5px 3em 12.5px;
+	/*argin: 39px 12.5px 0px 12.5px;*/
+justify-content: space-around;
+align-items: center;
+display: flex;
+flex-direction: row;
+
+
+	}
+
+	/*contact*/
+
+	.plxyc {
+		display: flex;
+	}
+
+	/*contact*/
+
+	[type="text"], [type="email"] {
+		width: 40.6vw;
+	}
+
+	[name='area'] {
+		width: 40.6vw;
+		height: 12.8em;
+		margin-top: .8em;
+	}
+
+	/*logos*/
+
+	.logosWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logosWrap a {
+	margin-right: 45px;
+}
+
+
+#aboutSection {
+    justify-content: space-between;
+    /*align-items: center;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.author-img {
+	height: 354px;
+	width: 354px;
+}
+
 }
